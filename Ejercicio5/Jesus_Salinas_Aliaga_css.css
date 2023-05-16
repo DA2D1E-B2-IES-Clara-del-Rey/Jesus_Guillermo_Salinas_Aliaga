@@ -1,0 +1,171 @@
+canvas {
+    display: none;
+    position: absolute;
+     margin: 0 auto !important;
+     left: 0;
+    right: 0;
+    top: 200px;
+    border: 2px solid black;
+    background-color: antiquewhite;
+}
+body{
+  background-image: url("image_page/fondo.jpg");
+}
+/* tamano de imagen del pacman: */
+.pacman_tamano{
+  width: 200px;
+}
+/* css del toast ubicacion: */
+
+.salirtoast{
+  position: absolute;
+  margin: 0 auto !important;
+  top:450px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+
+
+/* contenedor historial: */
+/* esto es para cambiar el color de fondo del scrollbar que tiene el contenedor al momento mostrar los elementos */
+#datosHistorial::-webkit-scrollbar{
+  background-color: transparent;
+  width: 7px;
+}
+/* añado el overflow que se encarga si los elementos del div se desborda se pueda scrolear sobre ellos */
+#datosHistorial{
+  overflow: auto;
+  height: 500px;
+}
+/* aquí añado el color de la barra de desplazamiento */
+#datosHistorial::-webkit-scrollbar-thumb{
+  background-color: rgb(58, 58, 54) !important;
+}
+
+/* div de la puntuación */
+.li_puntuacion{
+  width: 210px;
+}
+
+/* COLOR DE LA CABECERA- ---- */
+.imagenCabecera{
+    width: 300px;
+    height: 200px;
+
+}
+.cabeceraColor{
+    background-color: rgba(255, 255, 255, 0.712);
+}
+footer{
+  background-color: rgba(255, 255, 255, 0.712);
+  
+}
+/* el menú cuando pierdes */
+.menu_lose{
+  position: absolute;
+  margin: 0 auto !important;
+  top:350px;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 1;
+}
+/* las dimensiones del menú por defecto los menu win pausa y derrota */
+.menu_dimensiones{
+  width: 300px;
+  height: 300px;
+}
+/* el color de fondo de los menús de derrota win y pausa también se utiliza para el menú principal, instruccinoes y historial  tengo que cambiarle de nombre pero no me deja hacer refactor para todo el html*/
+/* entonces no me deja y cambiarlo del todo html cuesta mucho tiempo es una cosa de mejorarlo */
+.bg_color_menu_lose{
+  
+  background-color: rgb(152, 152, 152);
+}
+/* el tipo de texto igualmente no me permitia el refactor  */
+.fonts_menu_lose{
+  font-family: 'Righteous', cursive;
+}
+/* el menú cuando ganas */
+.menu_win{
+  position: absolute;
+  margin: 0 auto !important;/* aquí hago que siempre este centrado por que tiene un absolute y además tiene el left y rigth a 0 */
+  top:350px;
+  left: 0;
+  right: 0;
+  display:none;
+  z-index: 1;
+}
+
+/* Menú Principal del juego: */
+.menu_main{
+  position: absolute;
+  width:600 !important;
+  margin: 0 auto !important; /* aquí hago que siempre este centrado por que tiene un absolute y además tiene el left y rigth a 0 */
+  top:198px;
+  left: 0;
+  right: 0;
+  display:block;
+  z-index: 1;
+}
+/* css de menú de instrucciones */
+.menu_instrucciones{
+  position: absolute;
+  width:600 !important;
+  margin: 0 auto !important;/* aquí hago que siempre este centrado por que tiene un absolute y además tiene el left y rigth a 0 */
+  top:198px;
+  left: 0;
+  right: 0;
+  display:none;
+  z-index: 1;
+}
+/* son las dimensinoes del menú principal y menú que ocupen todo igual que el principal es utilizado para el historial y instrucciones, no pude cambiar el nombre por que no me permitia refactor */
+.menuMain_dimensiones{
+  width: 609px;
+  height: 609px;
+}
+/* responsive según los pixeles para que se vea para cualquier ordenador super bonito  */
+@media screen and (max-width : 1399px) {
+  .menu_main{
+    position: absolute;
+    top:198px;
+  }
+  .menu_instrucciones{
+    position: absolute;
+    top:198px;
+  }
+  .menu_lose{
+    top:350px;
+  }
+  .menu_win{
+    top:350px;
+  }
+  /* toast */
+  .salirtoast{
+    top: 450px;
+  }
+}
+@media screen and (max-width : 767px) {
+  .menu_main{
+    position: absolute;
+    top:200px;
+  }
+  canvas {
+    position: absolute;
+    top: 215px !important;
+  }
+  .menu_instrucciones{
+    position: absolute;
+    top:200px;
+  }
+  .menu_lose{
+    top:350px;
+  }
+  .menu_win{
+    top:350px;
+  }
+  .salirtoast{
+    top: 450px;
+  }
+}
